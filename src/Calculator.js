@@ -1,5 +1,5 @@
 import { memo, useEffect, useState } from "react";
-import clickSound from "./ClickSound.m4a";
+import ClickSound1 from "./ClickSound1.wav";
 
 function Calculator({ workouts, allowSound }) {
   const [number, setNumber] = useState(workouts.at(0).numExercises);
@@ -9,14 +9,7 @@ function Calculator({ workouts, allowSound }) {
 
   const [duration, setDuration] = useState(0);
 
-  // const playSound = useCallback(
-  //   function () {
-  //     if (!allowSound) return;
-  //     const sound = new Audio(clickSound);
-  //     sound.play();
-  //   },
-  //   [allowSound]
-  // );
+ 
 
   useEffect(
     function () {
@@ -29,7 +22,7 @@ function Calculator({ workouts, allowSound }) {
     function () {
       const playSound = function () {
         if (!allowSound) return;
-        const sound = new Audio(clickSound);
+        const sound = new Audio(ClickSound1);
         sound.play();
       };
 
